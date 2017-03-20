@@ -1099,15 +1099,16 @@
             'clickBar': true
         });
         // 信息中心内容滚动
-        if(document.documentElement.clientWidth > 1024){
-            new IScroll('#infoBox', {
-                scrollbars: true,
-                mouseWheel: true,
-                interactiveScrollbars: true,
-                shrinkScrollbars: 'scale',
-                fadeScrollbars: true
-            });
-        }
+        new IScroll('#infoBox', {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
+        });
+        /*if(document.documentElement.clientWidth > 1024){
+
+        }*/
     })
 </script>
 </body>
