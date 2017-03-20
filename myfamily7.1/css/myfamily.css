@@ -172,7 +172,7 @@ top: 0;}
 .cont_right{ width: 1077px; }
 .contRightCont{ margin-top: 8px; background:#fbfbfb; }
 .contRightCont_left{ width: 70.5%; }
-.contRightCont_right{ width: 28.75%; }
+.contRightCont_right{ width: 28.75%; height: 670px;}
 .contRightCont_left .cutBox{ margin-bottom:8px; background:#fff; padding: 0 16px 0 12px; }
 .contRightCont_left .cutBox .cutTit{ height: 48px; line-height: 48px; color: #000; font-size: 16px; font-weight: bold; }
 .contRightCont_left .cutBox .fu{margin-left: -8px;}
@@ -246,6 +246,12 @@ top: 0;}
 .infoCenterBox .infoBox .infoOneImg .infoTool img{width: 24px; height: 24px; vertical-align: -6px; margin-right: 10px;}
 .infoCenterBox .infoBox .infoOneImg .infoTool .infoBar{ color: #1788f2; margin-left: 7px; }
 .infoCenterBox .infoBox .infoOneImg .infoTool .dw{margin-right: 14px;}
+.infoCenterBox .infoBoxWrap .loadMore{width: 100%; height: 60px;}
+.infoCenterBox .infoBoxWrap .loadMore a:nth-child(1){display: block;}
+.infoCenterBox .infoBoxWrap .loadMore a:nth-child(2){display: none;}
+.infoCenterBox .infoBoxWrap .loadMore a{display: inline-block; width: 100%; height: 100%; line-height: 60px; text-align: center;}
+.infoCenterBox .infoBoxWrap .loadMore a img{width: 24px; height: 24px; position: relative; top: 50%; margin-top: -12px;}
+.infoCenterBox .infoBoxWrap .loadMore a span{margin-left: 10px; font-size: 14px; color: #848484;}
 /*add end*/
 
 .compBoard .compImgList{ width: 48%; height: 75px; float: left; color:#fff; margin-bottom: 8px; text-shadow: 0 2px 1px #f8a63b; }
@@ -360,6 +366,36 @@ top: 0;}
     .myFamily_head .myfaHeadCont .logoBox img.myfamily{margin-left: 10px; width: 35.485%; height: 48.9%;}
     .compSwipeBox .compSwipeList li,.compSwipeBox{ height: 250px !important;}
 
+    .infoCenterBox .infoBoxWrap .loadMore a:nth-child(1){
+        display: none;
+    }
+    .infoCenterBox .infoBoxWrap .loadMore a:nth-child(2){
+        display: block;
+    }
+    .infoCenterBox .infoBoxWrap .loadMore{
+        height: 60px;
+    }
+    .infoCenterBox .infoBoxWrap .loadMore a{
+        height: 60px;
+        line-height: 60px;
+    }
+    .infoCenterBox .infoBoxWrap .loadMore a span{
+        margin-left: 0;
+        font-size: 12px;
+    }
+    .infoCenterBox .infoBoxWrap .loadMore a img{
+        width: 8px;
+        height: 8px;
+        margin-top: -4px;
+    }
+    .tabBox .tabContBox .tabListBox .tabList{
+        margin: 27px 0;
+    }
+    .infoCenterBox .cutTitBox .cutToolsBox .cutToolsTitBox{
+        margin-top: 0px;
+        line-height: 30px;
+        height: 30px;
+    }
     .myFamily_head .myfaHeadCont .logoBox .personP{
         margin: 0 0 3.5px 0;
         height: 37px;
@@ -563,6 +599,8 @@ top: 0;}
     }
     .infoCenterBox .cutTitBox .cutTit{
         font-size: 12px;
+        height: 30px;
+        line-height: 30px;
     }
     .infoCenterBox .cutTitBox .cutToolsBox .cutToolsTitBox .allText{
         margin-right: 25px;
@@ -619,7 +657,7 @@ top: 0;}
     }
     .contRightCont_left .cutBox .cutListBox .cutList.active{
         background: url(../images/xuanzhong.png) no-repeat top center;
-        background-size: 100%;
+        background-size: auto;
     }
     #infoBox{
         height: 340px;
@@ -673,7 +711,7 @@ top: 0;}
         background: url(../images/infoStart.png) no-repeat 0 3px;
         padding-top: 2px;
         padding-left: 17px;
-        margin-left: 1%;
+        margin-left: 20%;
     }
     .infoCenterBox .infoBox .infoOneImg .infoTool p{
         width: 76%;
@@ -687,7 +725,7 @@ top: 0;}
     {
         background: url(../images/infoDisc.png) no-repeat 0 5px;
         padding-top: 2px;
-        padding-left: 20px;
+        padding-left: 17px;
     }
     .infoCenterBox .infoBox .infoList .infoContBox .infoTool .infoDisc{
         background: url(../images/infoDisc.png) no-repeat 0 12px;
@@ -706,7 +744,7 @@ top: 0;}
     }
     .infoCenterBox .infoBox .infoListImg .infoContBox .imgList{
         margin-left: 4px;
-        width: 70%;
+        width: 100%;
         overflow: hidden;
     }
     .infoCenterBox .infoBox .infoListImg .infoContBox .imgItem{
@@ -715,7 +753,7 @@ top: 0;}
     }
     .infoCenterBox .infoBox .infoListImg .infoContBox .imgList li{
         margin-left: 3.2%;
-        width: 30.12%;
+        width: 103px;
         height: 64.5px;
     }
     .infoCenterBox .infoBox .infoListImg .infoContBox .infoTool{
@@ -735,14 +773,17 @@ top: 0;}
         height: 16px;
         vertical-align: -3px;
     }
-    .infoCenterBox .infoBox .liTop{
-        margin: 0;
-    }
     .infoCenterBox .infoBox .infoListImg .infoContBox .infoTool .infoBar,.infoCenterBox .infoBox .infoList .infoContBox .infoTool .infoBar{
         margin-left: 0;
     }
+    .infoCenterBox .infoBox .liTop{
+        margin-top: 0;
+    }
     .infoCenterBox .infoBox .infoListImg .infoContBox .infoContTitBox .infoContTit a{
         font-size: 14px;
+    }
+    .infoCenterBox .infoBox .infoList{
+        padding-left: 7px;
     }
     .infoCenterBox .infoBox .infoListImg .infoContBox .imgList{
         margin-top: 0;
@@ -777,10 +818,11 @@ top: 0;}
     }
     .infoCenterBox .infoBox .infoList .infoContBox .infoTool .dw{
         margin-right: 4%;
+        width: 20%;
     }
     .infoCenterBox .infoBox .infoList .infoContBox .infoTool .infoStart{
         padding-left: 17px;
-        margin: 0;
+        margin-left: 20%;
     }
     .infoCenterBox .infoBox .infoOneImg .infoTool .infoDisc{
         background: url(../images/infoDisc.png) no-repeat 0 4px;
@@ -823,7 +865,7 @@ top: 0;}
         -webkit-transform-origin-x: 0;
         -webkit-transform: scale(0.83);
         line-height: 12px;
-        width: 40%;
+        width: 60%;
         font-size: 10px;
         font-weight: normal;
         color: #000;
@@ -831,10 +873,10 @@ top: 0;}
 
     .repository .repCont .repList .repListCont div:nth-of-type(1){
         display: inline-block;
-        width: 240%;
-        font-size: 9px;
-        -webkit-transform-origin-x: 0;
-        -webkit-transform: scale(0.8);
+        width: 124%;
+        font-size: 12px;
+        /*-webkit-transform-origin-x: 0;
+        -webkit-transform: scale(0.8);*/
         color: #c9c9c9;
     }
     .repository .repCont .repList .repListCont span{
@@ -848,9 +890,11 @@ top: 0;}
     }
     .repository .repCont .repList .repListCont h6{
         margin-bottom: 0;
+        font-size: 13px;
     }
     .repository .repCont .repList .repListCont h6 a{
-        height: 25px;
+        height: 28px;
+        line-height: 14px;
         display: inline-block;
         overflow: hidden;
         overflow: hidden;
@@ -899,7 +943,7 @@ top: 0;}
     }
     .forumBox .forum{
         width: 91.316%;
-        font-size: 10.5px;
+        font-size: 12px;
         color: #000;
     }
     .forumBox .hot{
@@ -920,7 +964,7 @@ top: 0;}
         margin-top: 7px;
     }
     .tabBox .tabContBox .tabListBox .tabList{
-        margin: 16px 0;
+        margin: 27px 0;
         padding: 0;
         height: 46px;
         line-height: 46px;
@@ -948,7 +992,14 @@ top: 0;}
     }
 }
 
+@media screen and (max-width: 923px){
+    .infoCenterBox .infoBox .infoOneImg .infoTool .infoStart, .infoCenterBox .infoBox .infoListImg .infoContBox .infoTool .infoStart,
+    .infoCenterBox .infoBox .infoList .infoContBox .infoTool .infoStart{
+        margin-left: 1%;
+    }
 
+
+}
 @media screen and (min-width: 415px) and (max-width:768px) {
     .myFamily_head .myfaHeadCont,  .myFamily_cont{ max-width: 752px; margin: 0 auto;}
     .compSwipeBox .compSwipeList li, .compSwipeBox{
@@ -959,6 +1010,19 @@ top: 0;}
     }
     .compBoard .compImgList .text{
         height: 26px;
+    }
+    .myFamily_cont .cont_left .workInfo div:nth-child(2).repository{
+        width: 37%;
+    }
+    .myFamily_cont .cont_left .workInfo div:nth-child(3).repository,
+    .myFamily_cont .cont_left .workInfo div:nth-child(4).repository{
+        width: 30%;
+    }
+    .repository .repCont .repList .repListCont{
+        margin-left: 4px;
+    }
+    .repository .repCont .repList .repListCont div:nth-of-type(1){
+        width: 139%;
     }
     /*.myFamily_cont .cont_left{margin-top: 900px;}*/
     /*.compSwipeBox{ height: 209px !important;}*/
@@ -1095,7 +1159,7 @@ top: 0;}
     }
     .tabBox{
         width: 100%;
-        height: 364px;
+        height: 336px;
     }
     .tabBox .tabContBox .tabListBox li:nth-of-type(1){
         margin-top: 6px;
@@ -1147,12 +1211,12 @@ top: 0;}
         align-items: center;
     }
     .infoCenterBox{
-        top: 480px;
+        top: 452px;
         width: 100%;
-        height: 367px;
+        height: 401px;
     }
     .myFamily_cont .cont_left{
-        top: 1119px;
+        top: 1124px;
     }
     .repository{
         width: 49%;
@@ -1203,9 +1267,45 @@ top: 0;}
     .infoCenterBox .infoBox .infoList .infoContBox .infoContTitBox .infoContTit a{
         font-size: 12px;
     }
-    
+    .infoCenterBox .infoBoxWrap .loadMore{
+        height: 31px;
+    }
+    .infoCenterBox .infoBoxWrap .loadMore a{
+        height: 31px;
+        line-height: 31px;
+    }
+    .infoCenterBox .infoBoxWrap .loadMore a span{
+        margin-left: 0;
+        font-size: 12px;
+    }
+    .infoCenterBox .infoBoxWrap .loadMore a img{
+        width: 8px;
+        height: 8px;
+        margin-top: -4px;
+    }
+
+    .tabBox .tabContBox .checkMore{
+        line-height: 32px;
+        padding: 0;
+    }
+    .tabBox .tabContBox .tabListBox li:nth-of-type(5){
+        display: none;
+    }
 }
 
+@media screen and (min-width: 320px) and (max-width: 413px){
+    .contRightCont_left .cutBox .cutListBox .cutList{
+        margin-left: -2%;
+    }
+    .infoCenterBox .infoBox .infoListImg .infoContBox .imgList li{
+        margin-left: 1.2%;
+        width: 99px;
+    }
+    .myFamily_head .myfaHeadCont .logoBox img.myfamily{
+        margin-top: 4%;
+        margin-left: 1%;
+    }
+}
 
 
 
