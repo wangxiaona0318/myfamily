@@ -404,9 +404,10 @@ top: 0;}
 
 @media screen and (max-width:1024px) {
     .myFamily_head .myfaHeadCont,  .myFamily_cont{ max-width: 1009px; margin: 0 auto;}
+    body{position: relative;}
     .footerContent{display: block; color: #818586;}
 
-    .footerContent{width: 100%; height: 60px; line-height: 60px; text-align: center; position: absolute; bottom: 77px; }
+    .footerContent{width: 100%; height: 60px; line-height: 60px; text-align: center; position: absolute; bottom: -1028px; }
     .myFamily_head .myfaHeadCont .logoBox{height: 100%;}
     .myFamily_head .myfaHeadCont .logoBox img{margin: 8px 0 0 0}
     .myFamily_head .myfaHeadCont .logoBox .logo{width: 30.69%; height: 44.45%;}
@@ -1052,7 +1053,7 @@ top: 0;}
 }
 @media screen and (min-width: 415px) and (max-width:768px) {
     .myFamily_head .myfaHeadCont,  .myFamily_cont{ max-width: 752px; margin: 0 auto;}
-    .footerContent{width: 100%; height: 40px; line-height: 40px; text-align: center; position: absolute; bottom: -202px; }
+    .footerContent{width: 100%; height: 40px; line-height: 40px; text-align: center; position: absolute; bottom: -965px; }
 
     .compSwipeBox .compSwipeList li, .compSwipeBox{
         height: 210px !important;
@@ -1083,7 +1084,7 @@ top: 0;}
 @media screen and (max-width: 414px){
     /*.myFamily_head .myfaHeadCont,  .myFamily_cont{ max-width: 360px; margin: 0 auto;}*/
     .myFamily_head .myfaHeadCont,  .myFamily_cont{ max-width: 398px; margin: 0 auto;}
-    .footerContent{width: 100%; height: 40px; line-height: 20px; text-align: center; position: absolute; bottom: -775px; }
+    .footerContent{width: 100%; height: 40px; line-height: 20px; text-align: center; position: absolute; bottom: -1168px; }
 
     .myFamily_head{
         height: 86px;
@@ -1351,7 +1352,7 @@ top: 0;}
 
 @media screen and (min-width: 320px) and (max-width: 374px){
     .myFamily_head .myfaHeadCont,  .myFamily_cont{ max-width: 365px; margin: 0 auto;}
-    .footerContent{bottom: -943px;}
+    .footerContent{bottom: -1170px;}
     .contRightCont_left .cutBox .cutListBox .cutList{
         margin-left: -2%;
     }
@@ -1391,7 +1392,7 @@ top: 0;}
     }
 }
 @media screen and (min-width: 375px) and (max-width: 413px){
-    .footerContent{bottom: -845px;}
+    .footerContent{bottom: -1168px;}
 }
 
 

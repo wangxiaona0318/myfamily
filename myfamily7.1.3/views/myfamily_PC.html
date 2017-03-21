@@ -1144,16 +1144,18 @@
                     $('.loadMore img').css({animation: 'change 1s linear infinite'});
                     setTimeout(function () {
                         $('.loadMore').hide();
-
+                        var str = $('.infoBox').html() + "<li style='height:100px'>111</li>";
+                        $('.infoBox').html(str)
                     }, 2000)
-
                 }
+                $('.loadMore').show();
             }
         });
 
         // 信息中心内容滚动
 
         if (document.documentElement.clientWidth < 1025) {
+            $('.searchBox input').attr('placeholder','');
             var scroll = new IScroll('#infoBox', {
                 scrollbars: true,
                 mouseWheel: true,
