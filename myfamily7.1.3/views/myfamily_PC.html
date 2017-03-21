@@ -746,8 +746,7 @@
                                 <span>加载更多</span>
                             </a>
                             <a href="##">
-                                <span>点击查看更多</span>
-                                <img src="../images/right.png"/>
+                                <span>上拉加载更多</span>
                             </a>
                         </div>
                     </div>
@@ -1176,9 +1175,8 @@
             })*/
             scroll.on('scrollEnd',function(){
                 if(Math.abs(this.y)+420+100>$('.infoBox')[0].scrollHeight){
-                    console.log(111)
                     $loadMore.remove();
-                    var str = $infoBox.html()+'<li>111</li>';
+                    var str = $infoBox.html()+'<li style="height: 100px">111</li>';
                     $infoBox.html(str);
                     $infoBox.append($loadMore);
                     this.refresh();

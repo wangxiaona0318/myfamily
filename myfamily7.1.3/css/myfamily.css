@@ -106,7 +106,7 @@ td,th{padding:0;}
 .myFamily_cont .cont_left .workInfo{ min-height: 300px; background: url(../images/pifu_03.png) no-repeat; background-size: 100%; position: relative; }
 .myFamily_cont .cont_left .workInfo .redShadow{ height: 84px; background: rgba(255, 0, 0, 0.1) }
 .cont_left .workInfo .personInfoBox{ width: 100%; position: absolute; left: 0; top: 43px; }
-.cont_left .workInfo .personInfoBox .personImgBox{ width: 22%; border-radius: 50%; margin: 3px 9px 3px 12px; overflow: hidden; }
+.cont_left .workInfo .personInfoBox .personImgBox{ width: 22%; height: 55px; border-radius: 50%; margin: 3px 9px 3px 12px; overflow: hidden; }
 .cont_left .workInfo .personInfoBox .personInfo{ width: 68%; }
 .cont_left .workInfo .personInfoBox .personImgBox .personImg{ width: 100%; height: 100%; }
 .cont_left .workInfo .personInfoBox .personInfo .person{ height: 32px; line-height: 32px; font-size: 18px; color:#fff; }
@@ -366,11 +366,9 @@ top: 0;}
 
 
 
-
-
-@media screen and (min-width:1025px) and (max-width:1366px){
+@media screen and (min-width:1025px) and (max-width:4096px){
     .myFamily_head .myfaHeadContRight .workMenuBox .workMenu{ font-size:13px; }
-    .myFamily_head .myfaHeadCont,  .myFamily_cont{width: 1335px;}
+    .myFamily_head .myfaHeadCont,  .myFamily_cont{width: 1337px; margin: 0 auto;}
     .myFamily_head .myfaHeadCont .logoBox .personP{display: none;}
     .myFamily_head .myfaHeadContRight .more{
         display: none;}
