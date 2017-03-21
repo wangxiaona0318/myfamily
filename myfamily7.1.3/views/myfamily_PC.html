@@ -464,7 +464,7 @@
                         <div class="cutToolsBox fr">
                             <div class="cutToolsTitBox">
                                 <span class="allText">全部</span>
-                                <i class="icon_down" id="cutToolsTit"></i>
+                                <img class="icon_down" id="cutToolsTit" src="../images/My-familY-home_down.png"/>
                             </div>
                             <ul class="cutTools">
                                 <li class="cutToolsList">全部</li>
@@ -955,7 +955,7 @@
 
 </div>
 <div class="footerContent myfaHeadCont">
-   <span>Copyright &copy; 2017 Sohu.com Inc. All Rights Reserved. 搜狐公司 版权所有</span>
+    <span>Copyright &copy; 2017 Sohu.com Inc. All Rights Reserved. 搜狐公司 版权所有</span>
 </div>
 <!-- container start -->
 
@@ -964,7 +964,6 @@
 <script type="text/javascript" src="../js/iscroll.js"></script>
 
 <script>
-
 
 
     $(function () {
@@ -1075,47 +1074,99 @@
         /*左右固定定位*/
         if (document.documentElement.clientWidth > 1024) {
             $(window).scroll(function () {
-                //1.7.1
-                /*if (document.documentElement.scrollTop || document.body.scrollTop > 865) {
-                 $('.cont_left ').css({position: 'fixed', top: '-768px'});
-                 } else {
-                 $('.cont_left ').css({position: 'static', top: '0'});
-                 }
-                 if (document.documentElement.scrollTop || document.body.scrollTop > 442) {
-                 $('.tabBox ').css({position: 'fixed', top: '93px', width: '309.63px'});
-                 } else {
-                 $('.tabBox ').css({position: 'static', top: '0'});
-                 }*/
+                        //1.7.1
+                        /*if (document.documentElement.scrollTop || document.body.scrollTop > 865) {
+                         $('.cont_left ').css({position: 'fixed', top: '-768px'});
+                         } else {
+                         $('.cont_left ').css({position: 'static', top: '0'});
+                         }
+                         if (document.documentElement.scrollTop || document.body.scrollTop > 442) {
+                         $('.tabBox ').css({position: 'fixed', top: '93px', width: '309.63px'});
+                         } else {
+                         $('.tabBox ').css({position: 'static', top: '0'});
+                         }*/
 
-                var width = document.documentElement.clientWidth || document.body.clientWidth;
-                //1.7.2
-                if (width > 1024) {
-                    if (document.documentElement.scrollTop || document.body.scrollTop > 513) {
-                        $('.knowledge').css({position: 'fixed', top: '90px', background: '#fff', width: '250px'});
-                    } else {
-                        $('.knowledge').css({position: 'static', top: '0'});
+                        var width = document.documentElement.clientWidth || document.body.clientWidth;
+                        //1.7.2
+                        /*
+                         * ie:"Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; InfoPath.3; rv:11.0) like Gecko"
+                         * foxfir: "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0"
+                         * google: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36"
+                         * saferi: "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2"
+                         * op:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 OPR/43.0.2442.1144"
+                         * */
+                        if (width > 1024) {
+                            var userAgent = window.navigator.userAgent;
+                            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                            if (!/Firefox|Trident/.test(userAgent)) {
+                                if (scrollTop > 513) {
+                                    $('.knowledge').css({
+                                        position: 'fixed',
+                                        top: '90px',
+                                        background: '#fff',
+                                        width: '250px'
+                                    });
+                                } else {
+                                    $('.knowledge').css({position: 'static', top: '0'});
+                                }
+                                if (scrollTop > 440) {
+
+                                    $('.translateRight ').css({
+                                        position: 'fixed',
+                                        top: '105px',
+                                        left: '1040px',
+                                        background: '#fff',
+                                        width: '250px'
+                                    });
+                                    $('.rbott ').css({
+                                        position: 'fixed',
+                                        top: '222px',
+                                        left: '1040px',
+                                        background: '#fff',
+                                        width: '250px'
+                                    });
+                                } else {
+                                    $('.translateRight ').css({position: 'absolute', top: '442px', left: '1033px'});
+                                    $('.rbott ').css({position: 'absolute', top: '564px', left: '1033px'});
+                                }
+                            } else {
+                                if (scrollTop > 513) {
+                                    $('.knowledge').css({
+                                        position: 'fixed',
+                                        top: '93px',
+                                        background: '#fff',
+                                        width: '250px'
+                                    });
+                                } else {
+                                    $('.knowledge').css({position: 'static', top: '0'});
+                                }
+                                if (scrollTop > 472) {
+
+                                    $('.translateRight ').css({
+                                        position: 'fixed',
+                                        top: '91px',
+                                        left: '1040px',
+                                        background: '#fff',
+                                        width: '250px'
+                                    });
+                                    $('.rbott ').css({
+                                        position: 'fixed',
+                                        top: '208px',
+                                        left: '1040px',
+                                        background: '#fff',
+                                        width: '250px'
+                                    });
+                                } else {
+                                    $('.translateRight ').css({position: 'absolute', top: '442px', left: '1033px'});
+                                    $('.rbott ').css({position: 'absolute', top: '564px', left: '1033px'});
+                                }
+                            }
+
+
+                        }
                     }
-                    if (document.documentElement.scrollTop || document.body.scrollTop > 440) {
-                        $('.translateRight ').css({
-                            position: 'fixed',
-                            top: '105px',
-                            left: '1040px',
-                            background: '#fff',
-                            width: '250px'
-                        });
-                        $('.rbott ').css({
-                            position: 'fixed',
-                            top: '222px',
-                            left: '1040px',
-                            background: '#fff',
-                            width: '250px'
-                        });
-                    } else {
-                        $('.translateRight ').css({position: 'absolute', top: '442px', left: '1033px'});
-                        $('.rbott ').css({position: 'absolute', top: '564px', left: '1033px'});
-                    }
-                }
-            });
+            )
+            ;
         }
 
         /*推荐圈子 员工论坛移到右侧 className translateRight*/
@@ -1135,6 +1186,7 @@
                 }
             }
         }
+
         removeClass();
         /*pc 获取信息中心数据*/
         $(window).scroll(function () {
@@ -1154,7 +1206,7 @@
         // 信息中心内容滚动
 
         if (document.documentElement.clientWidth < 1025) {
-            $('.searchBox input').attr('placeholder','');
+            $('.searchBox input').attr('placeholder', '');
             var scroll = new IScroll('#infoBox', {
                 scrollbars: true,
                 mouseWheel: true,
@@ -1166,17 +1218,17 @@
             var $loadMore = $('.loadMore');
             $infoBox.append($loadMore);
             /*$loadMore.on('click',function(){
-                console.log(111)
-                $loadMore.remove();
-                var str = $infoBox.html()+'<li>111</li>';
-                $infoBox.html(str);
-                $infoBox.append($loadMore);
+             console.log(111)
+             $loadMore.remove();
+             var str = $infoBox.html()+'<li>111</li>';
+             $infoBox.html(str);
+             $infoBox.append($loadMore);
 
-            })*/
-            scroll.on('scrollEnd',function(){
-                if(Math.abs(this.y)+420+100>$('.infoBox')[0].scrollHeight){
+             })*/
+            scroll.on('scrollEnd', function () {
+                if (Math.abs(this.y) + 420 + 100 > $('.infoBox')[0].scrollHeight) {
                     $loadMore.remove();
-                    var str = $infoBox.html()+'<li style="height: 100px">111</li>';
+                    var str = $infoBox.html() + '<li style="height: 100px">111</li>';
                     $infoBox.html(str);
                     $infoBox.append($loadMore);
                     this.refresh();
