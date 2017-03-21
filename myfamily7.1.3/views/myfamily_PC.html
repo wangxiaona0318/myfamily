@@ -1176,12 +1176,15 @@
             })*/
             scroll.on('scrollEnd',function(){
                 if(Math.abs(this.y)+420+100>$('.infoBox')[0].scrollHeight){
+                    console.log(111)
                     $loadMore.remove();
                     var str = $infoBox.html()+'<li>111</li>';
                     $infoBox.html(str);
                     $infoBox.append($loadMore);
+                    this.refresh();
                 }
             })
+
         }
     })
 </script>
