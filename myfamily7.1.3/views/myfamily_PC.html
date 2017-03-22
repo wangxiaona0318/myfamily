@@ -329,7 +329,7 @@
                             <li><a href="javascript:;"><img src="../images/swipe2.png"></a></li>
                         </ul>
                     </div>
-                    <ul class="clickBarBoxTwo">
+                    <ul class="clickBarBox">
                         <li class="clickBar"></li>
                         <li class="clickBar"></li>
                     </ul>
@@ -381,7 +381,7 @@
     <div class="cont_right fr">
         <!-- main swipe start -->
         <div class="compSwipeBox">
-            <ul class="compSwipeList clearfix" id="comp_list">
+            <ul class="compSwipeList clearfix" <!-- id="comp_list"-->>
                 <li class="compList">
                     <a href="javascript:;" style="background-image: url('../images/snowman.png')">
                         <!--<img src="../images/snowman.png">--></a>
@@ -1062,13 +1062,14 @@
         swipeImg('pic_list', {
             'animateTime': 600,
             'intervalTime': 3000,
-            'showPicNum': 2
+            'showPicNum': 2,
+            'clickBar': true,
         });
 
         swipeImg('comp_list', {
             'animateTime': 600,
             'intervalTime': 4000,
-            'clickBar': true
+            'clickBar': true,
         });
 
         /*左右固定定位*/
@@ -1104,31 +1105,50 @@
                                         position: 'fixed',
                                         top: '90px',
                                         background: '#fff',
-                                        width: '250px'
+                                        width: '18.5%'
                                     });
                                 } else {
-                                    $('.knowledge').css({position: 'static', top: '0'});
+                                    $('.knowledge').css({position: 'static', top: '0',width: '100%'});
                                 }
                                 if (scrollTop > 440) {
 
                                     $('.translateRight ').css({
                                         position: 'fixed',
-                                        top: '105px',
-                                        left: '1040px',
+                                        top: '95px',
+                                        left: '77%',
                                         background: '#fff',
-                                        width: '250px'
+                                        width: '23%'
                                     });
                                     $('.rbott ').css({
                                         position: 'fixed',
-                                        top: '222px',
-                                        left: '1040px',
+                                        top: '230px',
+                                        left: '77%',
                                         background: '#fff',
-                                        width: '250px'
+                                        width: '23%'
                                     });
                                 } else {
-                                    $('.translateRight ').css({position: 'absolute', top: '442px', left: '1033px'});
-                                    $('.rbott ').css({position: 'absolute', top: '564px', left: '1033px'});
+                                    $('.translateRight ').css({position: 'absolute', top: '442px',left:'411%', width: '123%'});
+                                    $('.rbott ').css({position: 'absolute', top: '579px', left:'411%', width: '123%'});
                                 }
+
+                                /*$('.translateRight ').css({
+                                    position: 'fixed',
+                                    top: '15%',
+                                    left: '77%',
+                                    background: '#fff',
+                                    width: '23%'
+                                });
+                                $('.rbott ').css({
+                                    position: 'fixed',
+                                    top: '37%',
+                                    left: '77%',
+                                    background: '#fff',
+                                    width: '23%'
+                                });
+                            } else {
+                                $('.translateRight ').css({position: 'absolute', top: '51%',left:'411%', width: '123%'});
+                                $('.rbott ').css({position: 'absolute', top: '66.5%', left:'411%', width: '123%'});
+                            }*/
                             } else {
                                 if (scrollTop > 513) {
                                     $('.knowledge').css({
@@ -1145,20 +1165,20 @@
                                     $('.translateRight ').css({
                                         position: 'fixed',
                                         top: '91px',
-                                        left: '1040px',
+                                        /*left: '1040px',*/
                                         background: '#fff',
                                         width: '250px'
                                     });
                                     $('.rbott ').css({
                                         position: 'fixed',
                                         top: '208px',
-                                        left: '1040px',
+                                        /*left: '1040px',*/
                                         background: '#fff',
                                         width: '250px'
                                     });
                                 } else {
-                                    $('.translateRight ').css({position: 'absolute', top: '442px', left: '1033px'});
-                                    $('.rbott ').css({position: 'absolute', top: '564px', left: '1033px'});
+                                    $('.translateRight ').css({position: 'absolute', top: '442px'});
+                                    $('.rbott ').css({position: 'absolute', top: '564px'});
                                 }
                             }
 
@@ -1174,7 +1194,12 @@
             var $current = $('.repository.nobd.zone');
             var $rbott = $('.rbott');
             var width = document.documentElement.clientWidth || document.body.clientWidth;
-            if (width < 1025) {
+            if(document.body.style.overflow!="hidden"&&document.body.scroll!="no"&&
+                    document.body.scrollHeight>document.body.offsetHeight){
+                width -= 17;
+            }
+
+            if (width < 1008) {
                 if ($current.hasClass('translateRight')) {
                     $current.removeClass('translateRight');
                     $rbott.removeClass('translateRBott');
@@ -1217,14 +1242,6 @@
             var $infoBox = $('.infoBox');
             var $loadMore = $('.loadMore');
             $infoBox.append($loadMore);
-            /*$loadMore.on('click',function(){
-             console.log(111)
-             $loadMore.remove();
-             var str = $infoBox.html()+'<li>111</li>';
-             $infoBox.html(str);
-             $infoBox.append($loadMore);
-
-             })*/
             scroll.on('scrollEnd', function () {
                 if (Math.abs(this.y) + 420 + 100 > $('.infoBox')[0].scrollHeight) {
                     $loadMore.remove();
@@ -1236,6 +1253,13 @@
             })
 
         }
+        $(window).scroll(function(){
+           /* console.log('scroll')
+            setTimeout(function(){
+                console.log('reload');
+                location.reload();
+            },1000);*/
+        })
     })
 </script>
 </body>

@@ -2,7 +2,7 @@
 
 *{ padding:0; margin:0; box-sizing: border-box;}
 html{ font-size:20px; }
-body{ font: 12px "Microsoft Yahei", SimSun, arial, sans-serif; color:#666; line-height:100%; background: #f2f4f6;}
+body{overflow-x: hidden; font: 12px "Microsoft Yahei", SimSun, arial, sans-serif; color:#666; line-height:100%; background: #f2f4f6;min-width: 337px;}
 ul,ol{ list-style:none;}
 a{ color:inherit; text-decoration:none;}
 h1,h2,h3,h4,h5,h6{ font-size:12px; font-weight:normal; font-family:"Microsoft Yahei"; }
@@ -78,6 +78,25 @@ td,th{padding:0;}
 }
 :root .gradient{filter:none;}
 .iScrollIndicator{ background: #bbb !important; }  /*  scrollbar color  */
+
+
+@media screen and (min-width:1025px) and (max-width:4096px){
+    body{width: 100%;overflow:scroll;overflow-x:hidden }
+    .myFamily_head .myfaHeadContRight .workMenuBox .workMenu{ font-size:13px; }
+    .myFamily_head .myfaHeadCont,  .myFamily_cont{width: 1337px; margin: 0 auto; scroll:none;}
+    .myFamily_head .myfaHeadCont .logoBox .personP{display: none;}
+    .myFamily_head .myfaHeadContRight .more{
+        display: none;}
+    .contRightCont_left .app{display: none;}
+    .clickBarBoxTwo{
+        display: none;
+    }
+    .footerContent{display: none;}
+}
+
+@media screen and (max-width: 1337px){
+    .myFamily_head .myfaHeadCont,  .myFamily_cont{width: 100%; margin: 0 auto; scroll:none;}
+}
 /*   head   */
 .myFamily_head{ width: 100%; height: 90px; background: url(../images/nav/nav.jpg) no-repeat; background-size: cover; position: fixed; z-index:999999; }
 .myFamily_head .myfaHeadCont{ height: 100%; margin:0 auto; }
@@ -102,14 +121,14 @@ td,th{padding:0;}
 /*   head  end */
 /*   body   */
 .myFamily_cont{ padding: 99px 0 0 0; margin: 0 auto; }
-.myFamily_cont .cont_left{ /*width: calc(20% - 8px);*/ width:250px; margin-right: 8px; background:#fff; }
+.myFamily_cont .cont_left{ /*width: calc(20% - 8px);*/width: 18.699%; margin-right: 0.59%; background:#fff; }
 .myFamily_cont .cont_left .workInfo{ min-height: 300px; background: url(../images/pifu_03.png) no-repeat; background-size: 100%; position: relative; }
 .myFamily_cont .cont_left .workInfo .redShadow{ height: 84px; background: rgba(255, 0, 0, 0.1) }
 .cont_left .workInfo .personInfoBox{ width: 100%; position: absolute; left: 0; top: 43px; }
-.cont_left .workInfo .personInfoBox .personImgBox{ width: 22%; height: 55px; border-radius: 50%; margin: 3px 9px 3px 12px; overflow: hidden; }
+.cont_left .workInfo .personInfoBox .personImgBox{ width: 22%; height: 88.71%; border-radius: 50%; margin: 1.2% 3.6% 1.2% 4.8%; overflow: hidden; }
 .cont_left .workInfo .personInfoBox .personInfo{ width: 68%; }
 .cont_left .workInfo .personInfoBox .personImgBox .personImg{ width: 100%; height: 100%; }
-.cont_left .workInfo .personInfoBox .personInfo .person{ height: 32px; line-height: 32px; font-size: 18px; color:#fff; }
+.cont_left .workInfo .personInfoBox .personInfo .person{height: 26px;line-height: 39px; font-size: 18px; color:#fff; }
 .cont_left .workInfo .personInfoBox .personInfo .person a{ font-size: 12px; color:#fff; text-decoration: underline; }
 .cont_left .workInfo .personInfoBox .personInfo .person .personName{text-decoration: none;}
 .cont_left .workInfo .personInfoBox .personInfo .jobInfo{ height: 20px; line-height: 20px; margin-top: 10px; color:#575757; }
@@ -134,23 +153,26 @@ td,th{padding:0;}
 .repository .repHead .more{ font-size: 12px; color: #ff7d33; cursor: pointer; }
 .repository .repCont .repList{ margin-top: 19px; }
 .repository .repCont .repList .repListImg{ width: 19.57%; }
-.repository .repCont .repList .repListCont{ width: 68.7%; line-height: 16px; padding-left: 7px; }
+.repository .repCont .repList .repListCont{ width: 68.7%; line-height: 16px; padding-left: 3%; }
 .repository .repCont .repList .repListCont h6{ min-height: 32px; color: #202020; margin-bottom: 6px;  }
 .repository .repCont .repList .repListCont h6 a:hover{text-decoration: underline;}
 .repository .repCont .repList .repListCont p{ color: #c4c4c4; }
-.repository .repCont .repList .repListCont .read{ margin-right: 16%; }
-.repository .repCont .repList .repListCont span{ color: #49a8ff; margin-left: 4px; }
+.repository .repCont .repList .repListCont .read{ margin-left: 1%; }
+.repository .repCont .repList .repListCont span{ color: #49a8ff; margin-left: 0%; }
 .repository .repCont .repList .new{ width:10%; height: 12px; margin-top: 3px; }
 .zone{ padding: 17px 0 0; }
-.zone .repHead{ margin: 0 8px 12px 15px; }
+.zone .repHead{ margin: 0 3% 12px 2%; }
 /* left swipe start*/
-.scroll_horizontal{position:relative; height:72px; padding:6px 5px; background-color:#f7f7f7;}
+.scroll_horizontal{position:relative; height:54.67%; padding:6px 3%; background-color:#f7f7f7;}
 .scroll_horizontal .swipeBox{overflow:hidden; position:relative; height:66px; margin:0 auto;}
 .scroll_horizontal .swipeList{ overflow:hidden;  width:9999px; position: absolute; left: 0;
 top: 0;}
 .scroll_horizontal .swipeList li{float:left;}
 .scroll_horizontal .swipeList li a{display: block;}
 .scroll_horizontal .swipeList li img{ width:calc(100% - 5px); margin-right: 5px;}
+.scroll_horizontal .clickBarBox .clickBar{width: 5px; height: 5px; background: #e7e7e7;}
+.scroll_horizontal .clickBarBox .clickBar.active{background: #c1c1c1;}
+
 /* left swipe end*/
 
 /* top swipe start*/
@@ -160,7 +182,7 @@ top: 0;}
 .compSwipeBox .compSwipeList li a{display: block;background-position: top center;height: 100%;background-size: 100% 100%;background-origin: border-box;}
 /*.compSwipeBox .compSwipeList li img{ width:100%;position: absolute;
     left: 50%;margin-left: -50%;}*/
-.clickBarBox{ position: absolute; right: 24px; bottom:16px; }
+.clickBarBox{ position: absolute; right: 127px; bottom: 8px; }
 .clickBarBox .clickBar{ width: 10px; height: 10px; background:#cbdff5; border-radius: 50%; float: left; margin-left: 11px; }
 .clickBarBox .clickBar.active{ background: #fff; }
 /* top swipe end*/
@@ -171,22 +193,23 @@ top: 0;}
 .forumBox .replyBox .reply{ color: #c9c9c9; margin-right: 12px; }
 .forumBox .hot{ margin-top: 2px; }
 
-.cont_right{ width: 1077px; }
-.contRightCont{ margin-top: 8px; background:#fbfbfb; }
+.cont_right{ width: 80.554%; }
+.contRightCont{ margin-top: 8px;}
 .contRightCont_left{ width: 70.5%; }
 .contRightCont_right{ width: 28.75%; height: 670px;}
-.contRightCont_left .cutBox{ margin-bottom:8px; background:#fff; padding: 0 16px 0 12px; }
+.contRightCont_right .compBoard{background: #fff; border-radius: 4px;}
+.contRightCont_left .cutBox{ margin-bottom:8px; background:#fff; padding: 0 3% 0 1.2%; }
 .contRightCont_left .cutBox .cutTit{ height: 48px; line-height: 48px; color: #000; font-size: 16px; font-weight: bold; }
-.contRightCont_left .cutBox .fu{margin-left: -8px;}
+.contRightCont_left .cutBox .fu{margin-left: -1%;}
 .contRightCont_left .cutBox .cutListBox{ padding: 8px 0 22px 2px; }
-.contRightCont_left .cutBox .cutListBox .cutList{ width: 14.59%; text-align: center; padding-top: 9px; line-height: 31px; font-size: 14px; font-weight: bold; color: #6e6e6e; border-radius: 5px; margin-left: 8px; cursor: pointer; transition: .3s all ease;}
+.contRightCont_left .cutBox .cutListBox .cutList{ width: 14.59%; text-align: center; padding-top: 9px; line-height: 31px; font-size: 14px; font-weight: bold; color: #6e6e6e; border-radius: 5px; margin-left: 1%; cursor: pointer; transition: .3s all ease;}
 .contRightCont_left .cutBox .cutListBox .long p{ line-height: 16px; padding-top: 4px; }
-.contRightCont_left .cutBox .cutListBox .cutList img{ width: 36px; height: 34px; margin-top: 7px; }
+.contRightCont_left .cutBox .cutListBox .cutList img{ width: 33.68%; height: 34px; margin-top: 7px; }
 .contRightCont_left .cutBox .cutListBox .cutList.active{ background: url("../images/xuanzhong.png") no-repeat; color:#fff; }
 .contRightCont_left .cutBox .cutListBox .cutMore{ width: 4.5%; height: 32px; border-radius: 3px; margin-top: 22px; cursor: pointer; }
-.infoCenterBox{  background:#fff; padding: 0 18px 0 11px; }
+.infoCenterBox{  background:#fff; padding: 0 4% 0 1.5%; }
 .infoCenterBox .cutTitBox .cutToolsBox{ position: relative; }
-.infoCenterBox .cutTitBox .cutToolsBox .cutToolsTitBox{margin-right: 13px; height: 28px; line-height: 28px; position: relative; cursor: pointer; margin-top: 10px; }
+.infoCenterBox .cutTitBox .cutToolsBox .cutToolsTitBox{margin-right: 0%; height: 28px; line-height: 28px; position: relative; cursor: pointer; margin-top: 10px; }
 .infoCenterBox .cutTitBox .cutToolsBox .cutToolsTitBox .cutToolsTit{ padding-right: 18px; }
 .infoCenterBox .cutTitBox .cutToolsBox .cutToolsTitBox:hover{ color: #0889ed; }
 .infoCenterBox .cutTitBox .cutToolsBox .cutToolsTitBox .icon_down{ width: 9px; height: 5px; position: absolute; right: 6px; top: 12px; }
@@ -197,7 +220,7 @@ top: 0;}
 .infoCenterBox .cutTitBox .cutTit{ height: 48px; line-height: 48px; color: #000; font-size: 16px; font-weight: bold; position: relative; }
 #infoBox{position: relative; }
 .infoCenterBox .infoBox{margin: 7px 0 0 0; width: 100%; }
-.infoCenterBox .infoBox .infoList{ border-bottom: 1px solid #e8e8e8; padding-left: 13px;}
+.infoCenterBox .infoBox .infoList{ border-bottom: 1px solid #e8e8e8; padding-left: 2%;}
 .infoCenterBox .infoBox .infoList .infoImgBox{ width: 42px; height: 42px; border-radius: 50%; margin-top: 11px;  }
 .infoCenterBox .infoBox .infoList .infoContBox .infoContTitBox{ line-height: 29px; font-size: 12px; }
 .infoCenterBox .infoBox .infoList .infoContBox .infoContTitBox .infoContTit{ line-height: 29px; font-size: 16px; color: #3d3d3d; }
@@ -213,7 +236,7 @@ top: 0;}
 .infoCenterBox .infoBox .liTop{margin-top: 16px;}
 
 /*add infoListImg*/
-.infoCenterBox .infoBox .infoListImg{ border-bottom: 1px solid #e8e8e8; padding-left: 13px;}
+.infoCenterBox .infoBox .infoListImg{ border-bottom: 1px solid #e8e8e8; padding-left: 2%;}
 .infoCenterBox .infoBox .infoListImg .infoImgBox{ width: 42px; height: 42px; border-radius: 50%; margin-top: 11px;  }
 .infoCenterBox .infoBox .infoListImg .infoContBox .infoContTitBox{ line-height: 29px; font-size: 12px; }
 .infoCenterBox .infoBox .infoListImg .infoContBox .infoContTitBox .infoContTit{ line-height: 29px; font-size: 16px; color: #3d3d3d; }
@@ -228,18 +251,18 @@ top: 0;}
 .infoCenterBox .infoBox .infoListImg .infoContBox .infoTool .dw{margin-right: 22px;}
 .infoCenterBox .infoBox .liTop{margin-top: 16px;}
 
-.infoCenterBox .infoBox .infoListImg .infoContBox .imgList{margin-top: 9px; margin-left: -17px; width: 697px; }
-.infoCenterBox .infoBox .infoListImg .infoContBox .imgItem{width: 714px; overflow: hidden;}
-.infoCenterBox .infoBox .infoListImg .infoContBox .imgList li{float: left; margin-left: 17px; width: 221px; height: 140px;}
+.infoCenterBox .infoBox .infoListImg .infoContBox .imgList{margin-top: 9px; margin-left: -2%; width: 99.12%; }
+.infoCenterBox .infoBox .infoListImg .infoContBox .imgItem{width: 102.44%; overflow: hidden;}
+.infoCenterBox .infoBox .infoListImg .infoContBox .imgList li{float: left; margin-left: 2.3%; width: 30.954%; height: 100%;}
 .infoCenterBox .infoBox .infoListImg .infoContBox .imgList li img{width: 100%; height: 100%;}
     /*add end*/
 
 /*add infoListImg*/
-.infoCenterBox .infoBox .infoOneImg{padding:0 0 19px 13px; margin-top: 19px; border-bottom: 1px solid #e8e8e8;}
+.infoCenterBox .infoBox .infoOneImg{padding:0 0 19px 2%; margin-top: 19px; border-bottom: 1px solid #e8e8e8;}
 .infoCenterBox .infoBox .infoOneImg .item{float: left;}
-.infoCenterBox .infoBox .infoOneImg .itemImg{ width: 188px; height: 118px;}
+.infoCenterBox .infoBox .infoOneImg .itemImg{ width: 25.74%; height: 118px;}
 .infoCenterBox .infoBox .infoOneImg .item img{width: 100%; height: 100%;}
-.infoCenterBox .infoBox .infoOneImg .infoContBox{margin-left: 17px; width: calc(100% - 212px);}
+.infoCenterBox .infoBox .infoOneImg .infoContBox{margin-left: 3%; width: calc(100% - 212px);}
 .infoCenterBox .infoBox .infoOneImg .infoContTit{line-height: 22px; font-size: 16px; color: #3d3d3d;}
 .infoCenterBox .infoBox .infoOneImg .infoContTit a{font-size: 16px; font-weight: bold;}
 .infoCenterBox .infoBox .infoOneImg .infoContTit a:hover{text-decoration: underline;}
@@ -271,10 +294,11 @@ top: 0;}
 */
 
 .compBoard .compImgList{ position: relative; border-radius: 3px;}
+.compBoard .compImgList.board3,.compBoard .compImgList.board4{margin-bottom: 1px;}
 .compBoard .compImgList a{ width: 100%; height: 100%; display: inline-block;}
-.compBoard .compImgList .bg{position: absolute; width: 100%; height: 100%; float: right;}
-.compBoard .compImgList .text{position: absolute; top: 29px; right: 7px; float: right; width: 80px; height: 30px; }
-.compBoard .compImgList:nth-child(1), .compBoard .compImgList:nth-child(3){ margin-right: 10px; }
+.compBoard .compImgList .bg{position: absolute; width: 100%; height: 100%; float: right;border-radius: 4px;}
+.compBoard .compImgList .text{position: absolute; top: 29px; right: 7px; float: right; width: 53.84%; height: 40%; }
+.compBoard .compImgList:nth-child(1), .compBoard .compImgList:nth-child(3){ margin-right: 4%; }
 
 .tabBox{  background:#fff; display: none;}
 .tabBox .tabTitBox .tabTit{ width: 50%; text-align: center; line-height: 48px; font-size: 16px; font-weight: bold; color: #424446; border-bottom: 1px solid #ebebeb; float: left; cursor: pointer; }
@@ -323,16 +347,16 @@ top: 0;}
     position: absolute;
     background: #fff;
     top: 442px;
-    width: 250px;
-    left: 1024px;
+    left: 411%;
+    width: 123%;
     z-index: 1;
 }
 .translateRBott{
     position: absolute;
     background: #fff;
     top: 564px;
-    width: 250px;
-    left: 1024px;
+    left: 411%;
+    width: 123%;
     z-index: 1;
 }
 
@@ -372,18 +396,7 @@ top: 0;}
 
 
 
-@media screen and (min-width:1025px) and (max-width:4096px){
-    .myFamily_head .myfaHeadContRight .workMenuBox .workMenu{ font-size:13px; }
-    .myFamily_head .myfaHeadCont,  .myFamily_cont{width: 1337px; margin: 0 auto;}
-    .myFamily_head .myfaHeadCont .logoBox .personP{display: none;}
-    .myFamily_head .myfaHeadContRight .more{
-        display: none;}
-    .contRightCont_left .app{display: none;}
-    .clickBarBoxTwo{
-        display: none;
-    }
-    .footerContent{display: none;}
-}
+
 /*@media screen and (min-width: 1367px){
 	.myFamily_head .myfaHeadCont, .myFamily_cont{ width: 1366px;}
 }
@@ -417,6 +430,10 @@ top: 0;}
     .myFamily_head .myfaHeadCont .logoBox .logo{width: 30.69%; height: 44.45%;}
     .myFamily_head .myfaHeadCont .logoBox img.myfamily{margin-left: 10px; width: 35.485%; height: 48.9%;}
     .compSwipeBox .compSwipeList li,.compSwipeBox{ height: 250px !important;}
+
+    .myFamily_head .myfaHeadContRight .searchBox img {
+        margin: -1px 5px;
+    }
 
     .infoCenterBox .infoBoxWrap .loadMore a:nth-child(1){
         display: none;
@@ -554,8 +571,10 @@ top: 0;}
     }
     .clickBarBox{
         position: absolute;
-        right: 12px;
-        bottom: 13px;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20%;
     }
     .clickBarBox .clickBar{
         width: 5px;
@@ -808,7 +827,7 @@ top: 0;}
     }
     .infoCenterBox .infoBox .infoListImg .infoContBox .imgList li{
         margin-left: 3.2%;
-        width: 103px;
+        width: 30%;
         height: 64.5px;
     }
     .infoCenterBox .infoBox .infoListImg .infoContBox .infoTool{
@@ -984,7 +1003,6 @@ top: 0;}
         background: #ececec;
         border-radius: 50%;
         float: left;
-        margin-left: 11px;
     }
     .forumBox{
         margin-right: 14px;
@@ -1055,8 +1073,9 @@ top: 0;}
 
 
 }
-@media screen and (min-width: 415px) and (max-width:768px) {
-    .myFamily_head .myfaHeadCont,  .myFamily_cont{ max-width: 752px; margin: 0 auto;}
+
+@media screen and (min-width: 415px) and (max-width:740px) {
+    .myFamily_head .myfaHeadCont,  .myFamily_cont{ width: 752px; margin: 0 auto; scroll: none;}
     .footerContent{width: 100%; height: 40px; line-height: 40px; text-align: center; position: absolute; bottom: -965px; }
 
     .compSwipeBox .compSwipeList li, .compSwipeBox{
@@ -1069,11 +1088,11 @@ top: 0;}
         height: 26px;
     }
     .myFamily_cont .cont_left .workInfo div:nth-child(2).repository{
-        width: 37%;
+        width: 49%;
     }
     .myFamily_cont .cont_left .workInfo div:nth-child(3).repository,
     .myFamily_cont .cont_left .workInfo div:nth-child(4).repository{
-        width: 30%;
+        width: 49%;
     }
     .repository .repCont .repList .repListCont{
         margin-left: 4px;
@@ -1084,8 +1103,11 @@ top: 0;}
     /*.myFamily_cont .cont_left{margin-top: 900px;}*/
     /*.compSwipeBox{ height: 209px !important;}*/
 }
+/*@media screen and (max-width: 752px){
+    .myFamily_head .myfaHeadCont,  .myFamily_cont{width: 100%; margin: 0 auto; scroll:none;}
+}*/
 
-@media screen and (max-width: 414px){
+@media screen and (max-width: 752px){
     /*.myFamily_head .myfaHeadCont,  .myFamily_cont{ max-width: 360px; margin: 0 auto;}*/
     .myFamily_head .myfaHeadCont,  .myFamily_cont{ max-width: 398px; margin: 0 auto;}
     .footerContent{width: 100%; height: 40px; line-height: 20px; text-align: center; position: absolute; bottom: -1168px; }
@@ -1352,7 +1374,9 @@ top: 0;}
         display: none;
     }
 }
-
+@media screen and (max-width:398px){
+    .myFamily_head .myfaHeadCont,  .myFamily_cont{width: 100%; margin: 0 auto; scroll:none;}
+}
 
 @media screen and (min-width: 320px) and (max-width: 374px){
     .myFamily_head .myfaHeadCont,  .myFamily_cont{ max-width: 365px; margin: 0 auto;}
@@ -1395,6 +1419,10 @@ top: 0;}
         margin-left: 3px;
     }
 }
+@media screen and (max-width: 365px){
+    .myFamily_head .myfaHeadCont,  .myFamily_cont{ max-width: 100%; margin: 0 auto;scroll:none;}
+}
+
 @media screen and (min-width: 375px) and (max-width: 413px){
     .footerContent{bottom: -1168px;}
 }
