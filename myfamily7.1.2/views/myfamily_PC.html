@@ -7,6 +7,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="../css/myfamily.css">
+    <link rel="stylesheet" href="../css/swiper.min.css"/>
 
 </head>
 <body onselectstart="return false" style="-moz-user-select:none;">
@@ -329,7 +330,7 @@
                             <li><a href="javascript:;"><img src="../images/swipe2.png"></a></li>
                         </ul>
                     </div>
-                    <ul class="clickBarBoxTwo">
+                    <ul class="clickBarBox">
                         <li class="clickBar"></li>
                         <li class="clickBar"></li>
                     </ul>
@@ -380,26 +381,35 @@
     <!-- cont_right start -->
     <div class="cont_right fr">
         <!-- main swipe start -->
-        <div class="compSwipeBox">
-            <ul class="compSwipeList clearfix" id="comp_list">
+        <div class="swiper-container compSwipeBox">
+            <ul class="swiper-wrapper compSwipeList">
+                <li class="swiper-slide compList"><a href="javascript:;" style="background-image: url('../images/snowman.png')"></a></li>
+                <li class="swiper-slide compList"><a href="javascript:;" style="background-image: url('../images/snowman.png')"></a></li>
+                <li class="swiper-slide compList"><a href="javascript:;" style="background-image: url('../images/snowman.png')"></a></li>
+            </ul>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!--<div class="compSwipeBox">
+            <ul class="compSwipeList clearfix" &lt;!&ndash; id="comp_list"&ndash;&gt;>
                 <li class="compList">
                     <a href="javascript:;" style="background-image: url('../images/snowman.png')">
-                        <!--<img src="../images/snowman.png">--></a>
+                        &lt;!&ndash;<img src="../images/snowman.png">&ndash;&gt;</a>
                 </li>
                 <li class="compList">
                     <a href="javascript:;" style="background-image: url('../images/snowman.png')">
-                        <!--<img src="../images/snowman.png">--></a>
+                        &lt;!&ndash;<img src="../images/snowman.png">&ndash;&gt;</a>
                 </li>
                 <li class="compList">
                     <a href="javascript:;" style="background-image: url('../images/snowman.png')">
-                        <!--<img src="../images/snowman.png">--></a>
+                        &lt;!&ndash;<img src="../images/snowman.png">&ndash;&gt;</a>
                 </li>
-                <!--<li class="compList">
+                &lt;!&ndash;<li class="compList">
                     <a href="javascript:;"><img src="../images/snowman.png"></a>
                 </li>
                 <li class="compList">
                     <a href="javascript:;"><img src="../images/snowman.png"></a>
-                </li>-->
+                </li>&ndash;&gt;
             </ul>
 
             <ul class="clickBarBox">
@@ -407,7 +417,7 @@
                 <li class="clickBar"></li>
                 <li class="clickBar"></li>
             </ul>
-        </div>
+        </div>-->
         <!-- main swipe end -->
 
         <div class="contRightCont clearfix">
@@ -464,7 +474,7 @@
                         <div class="cutToolsBox fr">
                             <div class="cutToolsTitBox">
                                 <span class="allText">全部</span>
-                                <i class="icon_down" id="cutToolsTit"></i>
+                                <img class="icon_down" id="cutToolsTit" src="../images/My-familY-home_down.png"/>
                             </div>
                             <ul class="cutTools">
                                 <li class="cutToolsList">全部</li>
@@ -746,8 +756,7 @@
                                 <span>加载更多</span>
                             </a>
                             <a href="##">
-                                <span>点击查看更多</span>
-                                <img src="../images/right.png"/>
+                                <span>上拉加载更多</span>
                             </a>
                         </div>
                     </div>
@@ -955,64 +964,17 @@
 
 
 </div>
+<div class="footerContent myfaHeadCont">
+    <span>Copyright &copy; 2017 Sohu.com Inc. All Rights Reserved. 搜狐公司 版权所有</span>
+</div>
 <!-- container start -->
 
 <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="../js/swipeImg.js"></script>
+<script type="text/javascript" src="../js/swipeImg2.js"></script>
 <script type="text/javascript" src="../js/iscroll.js"></script>
+<script src="../js/swiper-3.4.2.min.js"></script>
 
 <script>
-
-    /*左右固定定位*/
-    if (document.documentElement.clientWidth > 1024) {
-        $(window).scroll(function () {
-            //1.7.1
-            /*if (document.documentElement.scrollTop || document.body.scrollTop > 865) {
-             $('.cont_left ').css({position: 'fixed', top: '-768px'});
-             } else {
-             $('.cont_left ').css({position: 'static', top: '0'});
-             }
-             if (document.documentElement.scrollTop || document.body.scrollTop > 442) {
-             $('.tabBox ').css({position: 'fixed', top: '93px', width: '309.63px'});
-             } else {
-             $('.tabBox ').css({position: 'static', top: '0'});
-             }*/
-
-            var width = document.documentElement.clientWidth || document.body.clientWidth;
-            //1.7.2
-            if(width > 1024){
-                if (document.documentElement.scrollTop || document.body.scrollTop > 513) {
-                    $('.knowledge').css({position: 'fixed', top: '90px',background:'#fff',width:'250px'});
-                } else {
-                    $('.knowledge').css({position: 'static', top: '0'});
-                }
-                if (document.documentElement.scrollTop || document.body.scrollTop > 440) {
-                    $('.translateRight ').css({position: 'fixed', top: '105px',left:'1033px',background:'#fff', width: '250px'});
-                    $('.rbott ').css({position: 'fixed', top: '222px',left:'1033px',background:'#fff', width: '250px'});
-                } else {
-                    $('.translateRight ').css({position: 'absolute',top: '442px',left:'1033px'});
-                    $('.rbott ').css({position: 'absolute',top: '564px',left:'1033px'});
-                }
-            }
-        });
-    }
-
-    /*推荐圈子 员工论坛移到右侧 className translateRight*/
-    function removeClass() {
-        var $current = $('.repository.nobd.zone');
-        var $rbott = $('.rbott');
-        var width = document.documentElement.clientWidth || document.body.clientWidth;
-        if (width < 1025) {
-            if ($current.hasClass('translateRight')) {
-                $current.removeClass('translateRight');
-                $rbott.removeClass('translateRBott');
-            }
-        } else {
-            $current.addClass('translateRight');
-            $rbott.addClass('translateRBott');
-        }
-    }
-    removeClass();
 
 
     $(function () {
@@ -1100,38 +1062,7 @@
             }
         });
 
-        // 右侧企业文化导航栏高度自适应
-        /*window.onresize = function () {
-         if(document.documentElement.clientWidth > 1024){
-         resetH()
-         }else{
-         resetHP();
-         }
-         };*/
-        /*resetH();
-         resetHP();
-         function resetHP() {
-         setTimeout(function () {
-         var h = parseInt($('.compImgList').css('width')) * .347 + 'px';
-         $('.compImgList').css('height', h);
-         }, 100)
 
-         }
-         function resetH() {
-         setTimeout(function () {
-         var h = parseInt($('.compImgList').css('width')) / 2 + 'px';
-         $('.compImgList').css('height', h);
-         }, 100)
-
-         }*/
-        /*
-         function banner(){
-         var width = document.documentElement.clientWidth;
-         var ulWidth = width*(1-0.073);
-         var liWidth = ulWidth/3;
-         $('.compList').css('width',liWidth);
-
-         }*/
         //设置右侧轮播图父级高度自适应
         var compH = parseInt($('.compSwipeBox').css('width')) * 0.24654;
         $('.compSwipeBox').css('height', compH);
@@ -1142,36 +1073,209 @@
         swipeImg('pic_list', {
             'animateTime': 600,
             'intervalTime': 3000,
-            'showPicNum': 2
+            'showPicNum': 2,
+            'clickBar': true,
         });
-        /*swipeImg('pic_listp', {
-         'animateTime': 600,
-         'intervalTime': 3000,
-         'showPicNum': 2,
-         'clickBar': true
-         });
-         // 右侧轮播图
-         swipeImg('comp_listp', {
-         'animateTime': 600,
-         'intervalTime': 4000,
-         'clickBar': true
-         });*/
-        swipeImg('comp_list', {
-            'animateTime': 600,
-            'intervalTime': 4000,
-            'clickBar': true
+
+
+
+        /*左右固定定位*/
+        if (document.documentElement.clientWidth > 1024) {
+            $(window).scroll(function () {
+                        //1.7.1
+                        /*if (document.documentElement.scrollTop || document.body.scrollTop > 865) {
+                         $('.cont_left ').css({position: 'fixed', top: '-768px'});
+                         } else {
+                         $('.cont_left ').css({position: 'static', top: '0'});
+                         }
+                         if (document.documentElement.scrollTop || document.body.scrollTop > 442) {
+                         $('.tabBox ').css({position: 'fixed', top: '93px', width: '309.63px'});
+                         } else {
+                         $('.tabBox ').css({position: 'static', top: '0'});
+                         }*/
+
+                        var width = document.documentElement.clientWidth || document.body.clientWidth;
+                        //1.7.2
+                        /*
+                         * ie:"Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; InfoPath.3; rv:11.0) like Gecko"
+                         * foxfir: "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0"
+                         * google: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36"
+                         * saferi: "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2"
+                         * op:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 OPR/43.0.2442.1144"
+                         * */
+                        if (width > 1024) {
+                            var userAgent = window.navigator.userAgent;
+                            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                            if (!/Firefox|Trident/.test(userAgent)) {
+                                if (scrollTop > 513) {
+                                    $('.knowledge').css({
+                                        position: 'fixed',
+                                        top: '90px',
+                                        background: '#fff',
+                                        width: '18.5%'
+                                    });
+                                } else {
+                                    $('.knowledge').css({position: 'static', top: '0',width: '100%'});
+                                }
+                                if (scrollTop > 440) {
+
+                                    $('.translateRight ').css({
+                                        position: 'fixed',
+                                        top: '95px',
+                                        left: '77%',
+                                        background: '#fff',
+                                        width: '23%'
+                                    });
+                                    $('.rbott ').css({
+                                        position: 'fixed',
+                                        top: '230px',
+                                        left: '77%',
+                                        background: '#fff',
+                                        width: '23%'
+                                    });
+                                } else {
+                                    $('.translateRight ').css({position: 'absolute', top: '442px',left:'411%', width: '123%'});
+                                    $('.rbott ').css({position: 'absolute', top: '579px', left:'411%', width: '123%'});
+                                }
+
+                                /*$('.translateRight ').css({
+                                    position: 'fixed',
+                                    top: '15%',
+                                    left: '77%',
+                                    background: '#fff',
+                                    width: '23%'
+                                });
+                                $('.rbott ').css({
+                                    position: 'fixed',
+                                    top: '37%',
+                                    left: '77%',
+                                    background: '#fff',
+                                    width: '23%'
+                                });
+                            } else {
+                                $('.translateRight ').css({position: 'absolute', top: '51%',left:'411%', width: '123%'});
+                                $('.rbott ').css({position: 'absolute', top: '66.5%', left:'411%', width: '123%'});
+                            }*/
+                            } else {
+                                if (scrollTop > 513) {
+                                    $('.knowledge').css({
+                                        position: 'fixed',
+                                        top: '93px',
+                                        background: '#fff',
+                                        width: '18.5%'
+                                    });
+                                } else {
+                                    $('.knowledge').css({position: 'static', top: '0',width:'100%'});
+                                }
+                                if (scrollTop > 451) {
+                                    $('.translateRight ').css({
+                                        position: 'fixed',
+                                        top: '91px',
+                                        left: '76.7%',
+                                        background: '#fff',
+                                        width: '23%'
+                                    });
+                                    $('.rbott ').css({
+                                        position: 'fixed',
+                                        top: '208px',
+                                        left: '76.7%',
+                                        background: '#fff',
+                                        width: '23%'
+                                    });
+                                } else {
+                                    $('.translateRight ').css({position: 'absolute', top: '442px',width: '123%',left:'411%'});
+                                    $('.rbott ').css({position: 'absolute', top: '564px',width: '123%',left:'411%'});
+                                }
+                            }
+
+
+                        }
+                    }
+            )
+            ;
+        }
+
+        /*推荐圈子 员工论坛移到右侧 className translateRight*/
+        function removeClass() {
+            var $current = $('.repository.nobd.zone');
+            var $rbott = $('.rbott');
+            var width = document.documentElement.clientWidth || document.body.clientWidth;
+            if(document.body.style.overflow!="hidden"&&document.body.scroll!="no"&&
+                    document.body.scrollHeight>document.body.offsetHeight){
+                width -= 17;
+            }
+
+            if (width < 1008) {
+                if ($current.hasClass('translateRight')) {
+                    $current.removeClass('translateRight');
+                    $rbott.removeClass('translateRBott');
+                }
+            } else {
+                if (!$current.hasClass('translateRight')) {
+                    $current.addClass('translateRight');
+                    $rbott.addClass('translateRBott');
+                }
+            }
+        }
+
+        removeClass();
+        /*pc 获取信息中心数据*/
+        $(window).scroll(function () {
+            if (document.documentElement.clientWidth > 1024) {
+                if ($(document).scrollTop() + $(window).height() > $('.infoCenterBox').offset().top + $('.infoCenterBox').outerHeight()) {
+                    $('.loadMore img').css({animation: 'change 1s linear infinite'});
+                    setTimeout(function () {
+                        $('.loadMore').hide();
+                        var str = $('.infoBox').html() + "<li style='height:100px'>111</li>";
+                        $('.infoBox').html(str)
+                    }, 2000)
+                }
+                $('.loadMore').show();
+            }
         });
+
         // 信息中心内容滚动
 
         if (document.documentElement.clientWidth < 1025) {
-            new IScroll('#infoBox', {
+            $('.searchBox input').attr('placeholder', '');
+            var scroll = new IScroll('#infoBox', {
                 scrollbars: true,
                 mouseWheel: true,
                 interactiveScrollbars: true,
                 shrinkScrollbars: 'scale',
-                fadeScrollbars: true
+                fadeScrollbars: true,
             });
+            var $infoBox = $('.infoBox');
+            var $loadMore = $('.loadMore');
+            $infoBox.append($loadMore);
+            scroll.on('scrollEnd', function () {
+                if (Math.abs(this.y) + 420 + 100 > $('.infoBox')[0].scrollHeight) {
+                    $loadMore.remove();
+                    var str = $infoBox.html() + '<li style="height: 100px">111</li>';
+                    $infoBox.html(str);
+                    $infoBox.append($loadMore);
+                    this.refresh();
+                }
+            })
+
         }
+        $(window).scroll(function(){
+           /* console.log('scroll')
+            setTimeout(function(){
+                console.log('reload');
+                location.reload();
+            },1000);*/
+        })
+
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 30,
+            autoplay: 1000,
+            speed:1000,
+            loop:true,
+            autoplayDisableOnInteraction:false,
+        });
     })
 </script>
 </body>
